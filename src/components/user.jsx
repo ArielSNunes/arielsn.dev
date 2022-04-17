@@ -24,7 +24,7 @@ const User = ({ user }) => {
 						</a>
 					</li>
 					<li>
-						<a href={`mailto:${user.email}`}>
+						<a href='mailto:arielsn@outlook.com'>
 							<VscMail />
 						</a>
 					</li>
