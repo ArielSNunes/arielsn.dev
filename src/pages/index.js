@@ -1,7 +1,6 @@
 import Repo from "../components/repo"
 import User from "../components/user"
-
-const githubApiUrl = 'https://api.github.com/users/arielsnunes'
+import getUser from "../helpers/getUser"
 
 function Home({ repos, user }) {
 	return (
@@ -15,27 +14,8 @@ function Home({ repos, user }) {
 }
 
 export async function getServerSideProps(ctx) {
-	const response = await fetch(`${githubApiUrl}/repos?sort=updated`)
-	const responseUser = await fetch(githubApiUrl)
-	const originalRepos = await response.json()
-	const originalUser = await responseUser.json()
-
-	const repos = originalRepos.map(
-		({ created_at, html_url, full_name, fork, updated_at }) => ({
-			created_at,
-			html_url,
-			full_name,
-			fork,
-			updated_at
-		})
-	)
-	return {
-		props: {
-			currentDate: (new Date()).toString(),
-			repos,
-			user: originalUser
-		}
-	}
+	const data = await getUser('ArielSNunes')
+	return { props: data }
 }
 
 export default Home
