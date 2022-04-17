@@ -4,7 +4,7 @@ const Repo = ({ repo }) => {
 			<span className={repo.fork ? 'text-yellow-500' : 'text-green-600'}>
 				{repo.fork ? 'Fork' : 'Repo'}
 			</span>
-			<a href={repo.html_url} target='_blank' className="ml-2 font-bold text-blue-600 hover:text-blue-800">
+			<a href={repo.html_url} target='_blank' className="ml-2 font-bold text-blue-600 hover:text-blue-800" rel="noreferrer">
 				{repo.full_name}
 			</a>
 			<br />
