@@ -8,7 +8,7 @@ export default async function getUser(githubUsername) {
 	const originalRepos = await response.json()
 	const originalUser = await responseUser.json()
 
-	const repos = originalRepos.map(
+	const repos = originalRepos || [].map(
 		({ created_at, html_url, full_name, fork, updated_at }) => ({
 			created_at,
 			html_url,
@@ -19,7 +19,7 @@ export default async function getUser(githubUsername) {
 	)
 
 	return {
-		repos,
+		repos: typeof repos === 'array' ? repos : [],
 		user: originalUser
 	}
 }
