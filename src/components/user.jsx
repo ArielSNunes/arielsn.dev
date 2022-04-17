@@ -3,11 +3,8 @@ import Image from "next/image"
 const User = ({ user }) => {
 	return (
 		<div>
-			<h1 className="text-4xl flex justify-between items-center mt-3">
-				Olá, eu sou o {user.name}
-				<a href={user.html_url} target='_blank' rel="noreferrer">
-					<Image src={user.avatar_url} alt={`Github ${user.login}`} width='50' className="rounded-full" />
-				</a>
+			<h1 className="text-4xl flex justify-start items-center mt-3">
+				Olá, eu sou o <a href={user.html_url} className='ml-1' target='_blank' rel="noreferrer">{user.name}</a>
 			</h1>
 			<p>Usuário desde {new Date(user.created_at).toLocaleDateString('pt-br')}</p>
 			<div className="flex gap-1">
