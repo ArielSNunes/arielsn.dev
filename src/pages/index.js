@@ -14,7 +14,7 @@ function Home({ repos, user }) {
 }
 
 export async function getServerSideProps(ctx) {
-	const data = await getUser('ArielSNunes', 3)
+	const data = await getUser('ArielSNunes', 6)
 	return { props: data }
 }
 
