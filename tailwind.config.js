@@ -5,6 +5,9 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			colors: {
+				orange: '#F05E7B'
+			}
 		},
 		fontFamily: {
 			sans: ['"Titillium Web"']
