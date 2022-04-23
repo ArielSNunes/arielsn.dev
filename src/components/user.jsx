@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { VscGithub, VscMail } from 'react-icons/vsc'
-
+import { FiLink, FiLink2 } from 'react-icons/fi'
 const User = ({ user }) => {
 	return (
 		<div className="mb-10 my-5 mx-3 md:mx-0">
@@ -18,21 +18,25 @@ const User = ({ user }) => {
 						<span>Seguidores: {user.followers}</span>
 					</div>
 					<div className="relative border-2 border-gray-700 rounded-lg mt-10">
-						<h3 className="text-2xl text-center relative -m-9 text-red-400">
+						<h3 className="text-2xl text-center relative -m-9 text-orange">
 							Contato
 						</h3>
 						<ul className="text-3xl flex justify-start gap-3 px-5 py-2 mt-10">
 							<li>
-								<a className="hover:text-red-400" href={user.html_url}>
+								<a className="hover:text-orange" href={user.html_url}>
 									<VscGithub />
 								</a>
 							</li>
 							<li>
-								<a className="hover:text-red-400" href='mailto:ariel.dev@gmail.com'>
+								<a className="hover:text-orange" href='mailto:arielsn1.dev@gmail.com'>
 									<VscMail />
 								</a>
 							</li>
-
+							<li>
+								<a className="hover:text-orange" href='https://arielsn.dev' target='_blank' rel="noreferrer">
+									<FiLink2 />
+								</a>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -43,8 +47,8 @@ const User = ({ user }) => {
 				</div>
 			</div>
 			<div className="bg-white mt-6 rounded-md p-4 shadow-lg">
-				<h3 className="text-center uppercase text-2xl text-red-400 font-medium">
-					Habilidades:
+				<h3 className="text-center uppercase text-2xl text-orange font-medium">
+					Habilidades
 				</h3>
 				<ul className="text-lg pl-3">
 					<li>Análise de requisitos</li>
@@ -55,10 +59,10 @@ const User = ({ user }) => {
 			</div>
 			<div className="mt-6 bg-white p-3 shadow-lg rounded-md">
 				<div className="p-4">
-					<h3 className="text-center uppercase text-2xl text-red-400 font-medium mb-3">
-						Formação acadêmica:
+					<h3 className="text-center uppercase text-2xl text-orange font-medium mb-3">
+						Formação acadêmica
 					</h3>
-					<h4 className="text-red-400 text-lg font-bold uppercase">
+					<h4 className="text-orange text-lg font-bold uppercase">
 						Ensino superior
 					</h4>
 					<h4 className="text-xl font-bold uppercase">

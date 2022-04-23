@@ -1,8 +1,19 @@
+import { VscRepoForked, VscRepo } from 'react-icons/vsc'
+import classnames from 'classnames'
+
 const Repo = ({ repo }) => {
+	const repoClasses = classnames(
+		'inline-block',
+		'text-xl',
+		{
+			'text-yellow-500': repo.fork,
+			'text-green-600': !repo.fork,
+		}
+	)
 	return (
-		<div className="rounded p-2 bg-gray-200 hover:shadow-lg my-3">
-			<span className={repo.fork ? 'text-yellow-500' : 'text-green-600'}>
-				{repo.fork ? 'Fork' : 'Repo'}
+		<div className="rounded p-2 bg-gray-200 hover:shadow-lg my-2 md:my-0">
+			<span className={repoClasses}>
+				{repo.fork ? <VscRepoForked title='Fork'/> : <VscRepo title='Repo'/>}
 			</span>
 			<a href={repo.html_url} target='_blank' className="ml-2 font-bold text-blue-600 hover:text-blue-800" rel="noreferrer">
 				{repo.full_name}
