@@ -4,17 +4,22 @@ import getUser from "../helpers/getUser"
 
 function Home({ repos, user }) {
 	return (
-		<div className="container mx-auto">
+		<div className="container mx-auto mb-10">
 			<User user={user} />
 			<div className="container mx-auto px-3 md:px-0">
-				{repos.map((repo, id) => <Repo repo={repo} key={id} />)}
+				<h3 className="text-orange text-center text-2xl uppercase">
+					Repositórios
+				</h3>
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 md:gap-3 mt-3">
+					{repos.map((repo, id) => <Repo repo={repo} key={id} />)}
+				</div>
 			</div>
 		</div>
 	)
 }
 
 export async function getServerSideProps(ctx) {
-	const data = await getUser('ArielSNunes', 6)
+	const data = await getUser('ArielSNunes', 12)
 	return { props: data }
 }
 
