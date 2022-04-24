@@ -11,7 +11,7 @@ const User = ({ user }) => {
 					</h1>
 					<p className="text-3xl font-bold">Desenvolvedor de Software FullStack</p>
 					<div className="flex gap-1">
-						<span>Reposítórios públicos: {user.public_repos}</span>
+						<span>Repositórios públicos: {user.public_repos}</span>
 						/
 						<span>Gists públicos: {user.public_gists}</span>
 						/
