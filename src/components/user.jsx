@@ -17,11 +17,11 @@ const User = ({ user }) => {
 						/
 						<span>Seguidores: {user.followers}</span>
 					</div>
-					<div className="relative border-2 border-gray-700 rounded-lg mt-10">
-						<h3 className="text-2xl text-center relative -m-9 text-orange">
-							Contato
-						</h3>
-						<ul className="text-3xl flex justify-start gap-3 px-5 py-2 mt-10">
+					<h3 className="text-2xl text-orange mt-3">
+						Contato
+					</h3>
+					<div className="relative border-2 border-gray-700 rounded-lg">
+						<ul className="text-3xl flex justify-start gap-3 px-5 py-2">
 							<li>
 								<a className="hover:text-orange" href={user.html_url}>
 									<VscGithub />
