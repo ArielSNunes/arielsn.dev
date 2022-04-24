@@ -42,7 +42,7 @@ const User = ({ user }) => {
 				</div>
 				<div className="hidden md:flex justify-end items-center">
 					<a href={user.html_url} className='ml-1' target='_blank' rel="noreferrer">
-						<Image src='/images/me.jpg' height={200} width={200} className='rounded-full' />
+						<Image src='/images/me.jpg' height={200} width={200} className='rounded-full' alt="Ariel dos Santos Nunes" />
 					</a>
 				</div>
 			</div>
