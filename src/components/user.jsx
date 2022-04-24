@@ -9,7 +9,7 @@ const User = ({ user }) => {
 					<h1 className="text-4xl">
 						Olá, eu sou o <br /><a href={user.html_url} target='_blank' rel="noreferrer">{user.name}</a>
 					</h1>
-					<p className="text-3xl font-bold">Desenvolvedor de Software FullStack</p>
+					<p className="text-3xl font-bold">Desenvolvedor de Software Fullstack</p>
 					<div className="flex gap-1">
 						<span>Repositórios públicos: {user.public_repos}</span>
 						/
