@@ -145,11 +145,11 @@ const ContactForm = () => {
 	}
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>
-			<div className="container px-5 py-16 mx-auto">
+			<div className="py-16 mx-auto">
 				<div className="flex flex-col text-center w-full mb-12">
 					<h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Entre em contato</h1>
 				</div>
-				<div className="lg:w-1/2 md:w-2/3 mx-auto">
+				<div className="xl:w-1/2 mx-auto">
 					<div className="flex flex-wrap -m-2">
 						<div className="p-2 md:w-1/2 w-full">
 							<div className="relative">

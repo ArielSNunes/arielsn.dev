@@ -9,9 +9,9 @@ function Obrigado({ repos, user }) {
 	return (
 		<Fragment>
 			<Header name={user.name} job='Desenvolvedor Fullstack' />
-			<div className="container mx-auto mb-10 text-center mt-5">
+			<div className="container mx-auto mb-10 mt-5">
 				<User user={user}>
-					<p>Obrigado pelo contato</p>
+					<p className='text-center p-10 rounded-md bg-green-400 my-6'>Obrigado pelo contato</p>
 				</User>
 				<Footer />
 			</div>
