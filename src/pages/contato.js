@@ -5,7 +5,7 @@ import Header from '../components/header'
 import User from "../components/user"
 import getUser from "../helpers/getUser"
 
-function Home({ repos, user }) {
+function Contato({ repos, user }) {
 	return (
 		<Fragment>
 			<Header name={user.name} job='Desenvolvedor Fullstack' />
@@ -24,4 +24,4 @@ export async function getServerSideProps(ctx) {
 	return { props: data }
 }
 
-export default Home
+export default Contato
