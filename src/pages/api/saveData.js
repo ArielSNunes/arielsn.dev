@@ -9,31 +9,42 @@ const credentials = {
 	private_key: process.env.SHEET_PRIVATE_KEY.replace(/\\n/g, "\n")
 }
 
+const doc = new GoogleSpreadsheet(process.env.SHEET_DOC_ID)
+
 /**
  * @param {NextApiRequest} req
  * @param {NextApiResponse} res
  */
 export default async function handler(req, res) {
+	const body = JSON.parse(req.body)
+
+	await doc.useServiceAccountAuth(credentials)
+	await doc.loadInfo()
+
+	const sheet = doc.sheetsByIndex[0]
 	try {
-		const doc = new GoogleSpreadsheet(process.env.SHEET_DOC_ID)
-
-		await doc.useServiceAccountAuth(credentials)
-		await doc.loadInfo()
-
-		const sheet = doc.sheetsByIndex[0]
 		const data = {
-			Nome: 'Ariel',
-			Email: 'arielsn1@gmail.com',
-			Mensagem: 'Teste',
+			Nome: body.name,
+			Email: body.email,
+			Mensagem: body.message,
 			DataContato: dayJs().format('DD/MM/YYYY HH:mm:ss'),
 			Respondido: 0
 		}
 
 		await sheet.addRow(data)
 
-		return res.json(credentials)
+		return res.json({
+			error: null,
+			success: true,
+			message: 'Obrigado por realizar o contato'
+		})
 	} catch (error) {
-		console.log(error)
-		return res.json(error)
+		const errorSheet = doc.sheetsByIndex[1]
+		await errorSheet.addRow({ Error: JSON.stringify(error.message) })
+		return res.json({
+			success: false,
+			error: error,
+			message: 'Ocorreu um erro, por favor, tente novamente'
+		})
 	}
 }
