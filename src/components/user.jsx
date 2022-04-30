@@ -9,7 +9,7 @@ const User = ({ user, children }) => {
 			<div className="grid grid-cols-1 md:grid-cols-2">
 				<div className="flex flex-col justify-end items-start">
 					<h1 className="text-4xl">
-						Olá, eu sou o <br /><Link href='/'>{user.name}</Link>
+						Olá, eu sou o <br /><Link href='/'>{user.name || 'Ariel Nunes'}</Link>
 					</h1>
 					<p className="text-3xl font-bold">Desenvolvedor de Software Fullstack</p>
 					<div className="flex gap-1">
@@ -25,17 +25,13 @@ const User = ({ user, children }) => {
 					<div className="relative border-2 border-gray-700 rounded-lg">
 						<ul className="text-3xl flex justify-start gap-3 px-5 py-2">
 							<li>
-								<Link href='/'>
-									<FiLink2 className="hover:text-orange hover:cursor-pointer" />
-								</Link>
+								<Link href='/'><FiLink2 className="hover:text-orange hover:cursor-pointer" /></Link>
 							</li>
 							<li>
-								<Link href='/contato'>
-									<VscMail className="hover:text-orange hover:cursor-pointer" />
-								</Link>
+								<Link href='/contato'><VscMail className="hover:text-orange hover:cursor-pointer" /></Link>
 							</li>
 							<li>
-								<a className="hover:text-orange" href={user.html_url} target='_blank' rel="noreferrer">
+								<a className="hover:text-orange" href={user.html_url || 'https://github.com/ArielSNunes'} target='_blank' rel="noreferrer">
 									<VscGithub />
 								</a>
 							</li>
@@ -44,7 +40,7 @@ const User = ({ user, children }) => {
 				</div>
 				<div className="hidden md:flex justify-end items-center">
 					<a href={user.html_url} className='ml-1' target='_blank' rel="noreferrer">
-						<Image src='/images/me.jpg' height={200} width={200} className='rounded-full' alt="Ariel dos Santos Nunes" />
+						<Image src='/images/me.jpg' height={200} width={200} className='rounded-full' alt="Ariel dos Santos Nunes" priority/>
 					</a>
 				</div>
 			</div>
