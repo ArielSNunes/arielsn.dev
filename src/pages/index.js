@@ -3,14 +3,17 @@ import Footer from "../components/footer"
 import Header from '../components/header'
 import Repo from "../components/repo"
 import User from "../components/user"
+import UserSkills from "../components/user-skills"
 import getUser from "../helpers/getUser"
 
 function Home({ repos, user }) {
 	return (
 		<Fragment>
 			<Header name={user.name} job='Desenvolvedor Fullstack' />
-			<div div className="container mx-auto mb-10" >
-				<User user={user} />
+			<div className="container mx-auto mb-10" >
+				<User user={user}>
+					<UserSkills />
+				</User>
 				<div className="container mx-auto px-3 md:px-0">
 					<h3 className="text-orange text-center text-2xl uppercase">
 						Repositórios
