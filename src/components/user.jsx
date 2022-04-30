@@ -13,16 +13,16 @@ const User = ({ user, children }) => {
 					</h1>
 					<p className="text-3xl font-bold">Desenvolvedor de Software Fullstack</p>
 					<div className="flex gap-1">
-						<span>Repositórios públicos: {user.public_repos}</span>
-						/
-						<span>Gists públicos: {user.public_gists}</span>
-						/
-						<span>Seguidores: {user.followers}</span>
+						<span className="border-2 border-orange px-3 py-1 rounded-md">Repositórios públicos: {user.public_repos}</span>
+						<span className="text-lg h-100 flex justify-center align-middle items-center">/</span>
+						<span className="border-2 border-orange px-3 py-1 rounded-md">Gists públicos: {user.public_gists}</span>
+						<span className="text-lg h-100 flex justify-center align-middle items-center">/</span>
+						<span className="border-2 border-orange px-3 py-1 rounded-md">Seguidores: {user.followers}</span>
 					</div>
 					<h3 className="text-2xl text-orange mt-3">
 						Contato
 					</h3>
-					<div className="relative border-2 border-gray-700 rounded-lg">
+					<div className="relative border-2 border-orange rounded-lg">
 						<ul className="text-3xl flex justify-start gap-3 px-5 py-2">
 							<li>
 								<Link href='/'><FiLink2 className="hover:text-orange hover:cursor-pointer" /></Link>
