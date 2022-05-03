@@ -19,9 +19,6 @@ const UserSkills = () => {
 					<h3 className="text-center uppercase text-2xl text-orange font-medium mb-3">
 						Formação acadêmica
 					</h3>
-					<h4 className="text-orange text-lg font-bold uppercase">
-						Ensino superior
-					</h4>
 					<h4 className="text-xl font-bold uppercase">
 						Engenharia da computação
 					</h4>
