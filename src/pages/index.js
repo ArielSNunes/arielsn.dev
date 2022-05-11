@@ -15,7 +15,7 @@ function Home({ repos, user }) {
 					<UserSkills />
 				</User>
 				{(repos && repos.length > 0) && (
-					<div div className="container mx-auto px-3 md:px-0">
+					<div className="container mx-auto px-3 md:px-0">
 						<h3 className="text-orange text-center text-2xl uppercase">
 							Repositórios
 						</h3>
@@ -26,7 +26,7 @@ function Home({ repos, user }) {
 				)}
 				<Footer />
 			</div>
-		</Fragment >
+		</Fragment>
 	)
 }
 
