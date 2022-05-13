@@ -2,6 +2,7 @@ import Image from "next/image"
 import { VscGithub, VscMail } from 'react-icons/vsc'
 import { FiLink2 } from 'react-icons/fi'
 import Link from "next/link"
+import profilePic from '../../public/images/me.jpg'
 
 const User = ({ user, children }) => {
 	return (
@@ -40,7 +41,7 @@ const User = ({ user, children }) => {
 				</div>
 				<div className="hidden md:flex justify-end items-center">
 					<a href={user.html_url} className='ml-1' target='_blank' rel="noreferrer">
-						<Image src='https://avatars.githubusercontent.com/u/22942598?v=4' height={200} width={200} className='rounded-full' alt="Ariel dos Santos Nunes" priority/>
+						<Image src={profilePic} height={200} width={200} className='rounded-full' alt="Ariel dos Santos Nunes" priority />
 					</a>
 				</div>
 			</div>
