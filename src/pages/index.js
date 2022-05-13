@@ -32,7 +32,7 @@ function Home({ repos, user }) {
 
 export async function getStaticProps(ctx) {
 	const data = await getUser('ArielSNunes', 12)
-	return { props: data }
+	return { props: data, revalidate: 1800 }
 }
 
 export default Home
