@@ -4,8 +4,8 @@ export default function getJobs() {
 			location: 'São José dos Campos/SP',
 			place: 'Henrique Consultoria Tributária',
 			isCurrent: false,
-			startDate: new Date(2019, 4, 16),
-			endDate: new Date(2020, 10, 13),
+			startDate: new Date(2019, 4 - 1, 16),
+			endDate: new Date(2020, 10 - 1, 13),
 			responsibilities: [
 				'Desenvolvimento de software e sistemas utilizando Bootstrap 4, jQuery, PHP 7 e MySQL',
 				'Otimização de performance de banco de dados',
@@ -21,8 +21,8 @@ export default function getJobs() {
 			location: 'São José dos Campos/SP',
 			place: 'Dynamic System e VISH! Internet e Sistemas LTDA',
 			isCurrent: true,
-			startDate: new Date(2020, 12, 1),
-			endDate: new Date(2020, 10, 13),
+			startDate: new Date(2020, 12-1, 1),
+			endDate: new Date(2020, 10-1, 13),
 			responsibilities: [
 				'Desenvolvimento de software e sistemas utilizando Bootstrap 4, jQuery, PHP 7 e MySQL',
 				'Desenvolvimento de API utilizando NodeJS e PHP 7',
@@ -32,5 +32,5 @@ export default function getJobs() {
 			],
 			role: 'Desenvolvedor Pleno II'
 		}
-	].sort((a,b) => b.startDate - a.startDate)
+	].sort((a, b) => b.startDate - a.startDate)
 }
