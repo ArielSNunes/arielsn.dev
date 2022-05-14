@@ -2,9 +2,10 @@ import classNames from "classnames"
 
 const SingleJob = ({ job, index, show }) => {
 	const startDate = job.startDate.toLocaleDateString('pt-br')
-	const endDate = job?.isCurrent
-		? (<span>o presente</span>)
-		: job.endDate.toLocaleDateString('pt-br')
+	const endDate = job.endDate.toLocaleDateString('pt-br')
+	const jobMessage = job?.isCurrent
+		? `Desde ${startDate}`
+		: `Entre ${startDate} e ${endDate}`
 
 	const currentJob = classNames(
 		'w-6',
@@ -36,7 +37,7 @@ const SingleJob = ({ job, index, show }) => {
 					{job.location}
 				</p>
 				<p className="text-sm text-gray-500">
-					Entre {startDate} e {endDate}
+					{jobMessage}
 				</p>
 			</div>
 			<ul className="ml-14 mt-1">
