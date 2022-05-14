@@ -26,7 +26,6 @@ export default function getJobs() {
 			responsibilities: [
 				'Desenvolvimento de software e sistemas utilizando Bootstrap 4, jQuery, PHP 7 e MySQL',
 				'Desenvolvimento de API utilizando NodeJS e PHP 7',
-				'Análise de requisitos',
 				'Desenvolvimento de rotinas de processamento assíncrono',
 				'Desenvolvimento de rotinas e lógicas para processamento de dados geoespaciais',
 				'Desenvolvimento de mapas interativos com Leaflet e ArcGIS'

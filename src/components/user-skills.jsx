@@ -9,7 +9,6 @@ const UserSkills = () => {
 					Habilidades
 				</h3>
 				<ul className="text-lg pl-3">
-					<li>Análise de requisitos</li>
 					<li>Software escrito seguindo os melhores padrões e práticas</li>
 					<li>Desenvolvimento de rotinas e filas de processamento assíncrono</li>
 					<li>Desenvolvimento de mapas interativos</li>
