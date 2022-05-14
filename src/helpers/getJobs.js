@@ -1,7 +1,7 @@
 export default function getJobs() {
 	return [
 		{
-			location: 'São José dos Campos/SP - Br',
+			location: 'São José dos Campos/SP',
 			place: 'Henrique Consultoria Tributária',
 			isCurrent: false,
 			startDate: new Date(2019, 4, 16),
@@ -18,7 +18,7 @@ export default function getJobs() {
 			role: 'Auxiliar de TI'
 		},
 		{
-			location: 'São José dos Campos/SP - Br',
+			location: 'São José dos Campos/SP',
 			place: 'Dynamic System e VISH! Internet e Sistemas LTDA',
 			isCurrent: true,
 			startDate: new Date(2020, 12, 1),
