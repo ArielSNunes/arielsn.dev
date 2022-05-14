@@ -1,4 +1,5 @@
 import { Fragment } from "react"
+import Jobs from './jobs'
 
 const UserSkills = () => {
 	return (
@@ -28,7 +29,9 @@ const UserSkills = () => {
 						(2012 - 2017)
 					</small>
 				</div>
-
+			</div>
+			<div>
+				<Jobs />
 			</div>
 		</Fragment>
 	)

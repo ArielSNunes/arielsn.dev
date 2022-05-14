@@ -7,12 +7,21 @@
 body {
   @apply bg-slate-100;
 }
+.disable-select {
+  user-select: none; /* supported by Chrome and Opera */
+ -webkit-user-select: none; /* Safari */
+ -khtml-user-select: none; /* Konqueror HTML */
+ -moz-user-select: none; /* Firefox */
+ -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
 .loader {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
   position: relative;
-  animation: rotate 1s linear infinite
+  animation: rotate 1s linear infinite;
+  -webkit-animation: rotate 1s linear infinite;
 }
 .loader::before , .loader::after {
   content: "";
