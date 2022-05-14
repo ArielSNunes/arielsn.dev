@@ -1,5 +1,9 @@
 import { Fragment } from "react"
+import getSkills from "../helpers/getSkills"
 import Jobs from './jobs'
+import SingleSkill from "./single-skill"
+
+const skillsList = getSkills()
 
 const UserSkills = () => {
 	return (
@@ -8,11 +12,9 @@ const UserSkills = () => {
 				<h3 className="text-center uppercase text-2xl text-orange font-medium">
 					Habilidades
 				</h3>
-				<ul className="text-lg pl-3">
-					<li>Software escrito seguindo os melhores padrões e práticas</li>
-					<li>Desenvolvimento de rotinas e filas de processamento assíncrono</li>
-					<li>Desenvolvimento de mapas interativos</li>
-				</ul>
+				<div className="grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
+					{skillsList.map((skill, index) => (<SingleSkill skill={skill} key={index} />))}
+				</div>
 			</div>
 			<div className="mt-6 bg-white p-3 shadow-lg rounded-md">
 				<div className="p-4">
