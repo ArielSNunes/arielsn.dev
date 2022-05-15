@@ -3,6 +3,8 @@ import { NextApiRequest, NextApiResponse } from 'next'
 
 import { GoogleSpreadsheet } from 'google-spreadsheet'
 import dayJs from 'dayjs'
+import utc from 'dayjs/plugin/utc'
+import tz from 'dayjs/plugin/timezone'
 
 const credentials = {
 	client_email: process.env.SHEET_CLIENT_EMAIL,
@@ -27,7 +29,9 @@ export default async function handler(req, res) {
 			Nome: body.name,
 			Email: body.email,
 			Mensagem: body.message,
-			DataContato: dayJs().format('DD/MM/YYYY HH:mm:ss'),
+			DataContato: dayJs()
+				.tz("America/Sao_Paulo")
+				.format('DD/MM/YYYY HH:mm:ss'),
 			Respondido: 0
 		}
 
