@@ -32,9 +32,9 @@ const Header = ({ name, job }) => {
 			<meta name="robots" content="index, follow" />
 			<meta charset="UTF-8" />
 			<link rel="canonical" href={url} />
-			<meta itemprop="url" content={url} />
-			<meta itemprop="name" content={`${myName} - ${myJob}`} />
-			<meta itemprop="description" content={desc} />
+			<meta itemProp="url" content={url} />
+			<meta itemProp="name" content={`${myName} - ${myJob}`} />
+			<meta itemProp="description" content={desc} />
 			<meta property="og:title" content={`${myName} - ${myJob} - ${desc}`} />
 			<meta property="og:description" content={`${myName} - ${myJob} - ${desc}`} />
 			<meta property="og:image:alt" content={`${myName} - ${myJob} - ${desc}`} />
