@@ -7,7 +7,7 @@ const SingleSkill = ({ skill }) => {
 	const skillClassname = classNames('text-xs', 'font-semibold', 'inline-block', 'py-1', 'px-2', 'uppercase', 'rounded-md', 'text-orange', 'border-orange', 'border-2')
 
 	const skillTeckLink = skill?.docs.length > 0
-		? <a href={skill.docs} target='_blank' className={skillClassname}>{skill.tech}</a>
+		? <a href={skill.docs} target='_blank' rel="noreferrer" className={skillClassname}>{skill.tech}</a>
 		: <span className={skillClassname}>{skill.tech}</span>
 
 	return (
