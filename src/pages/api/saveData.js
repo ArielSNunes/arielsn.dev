@@ -13,6 +13,9 @@ const credentials = {
 
 const doc = new GoogleSpreadsheet(process.env.SHEET_DOC_ID)
 
+dayJs.extend(utc)
+dayJs.extend(tz)
+
 /**
  * @param {NextApiRequest} req
  * @param {NextApiResponse} res
@@ -44,7 +47,7 @@ export default async function handler(req, res) {
 		})
 	} catch (error) {
 		const errorSheet = doc.sheetsByIndex[1]
-		await errorSheet.addRow({ Error: JSON.stringify(error.message) })
+		await errorSheet.addRow({ Error: `${JSON.stringify(error.message)}` })
 		return res.json({
 			success: false,
 			error: error,
