@@ -5,7 +5,7 @@ import Header from '../components/header'
 import User from "../components/user"
 import getUser from "../helpers/getUser"
 
-function Obrigado({ repos, user }) {
+function Obrigado({ user }) {
 	return (
 		<Fragment>
 			<Header name={user.name} job='Desenvolvedor Fullstack' />
@@ -21,7 +21,7 @@ function Obrigado({ repos, user }) {
 
 export async function getStaticProps(ctx) {
 	const data = await getUser('ArielSNunes', 12)
-	return { props: data, revalidate: 1800 }
+	return { props: data }
 }
 
 export default Obrigado
