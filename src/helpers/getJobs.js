@@ -30,7 +30,7 @@ export default function getJobs() {
 				'Desenvolvimento de rotinas e lógicas para processamento de dados geoespaciais',
 				'Desenvolvimento de mapas interativos com Leaflet e ArcGIS'
 			],
-			role: 'Desenvolvedor Pleno II'
+			role: 'Desenvolvedor Pleno III'
 		}
 	].sort((a, b) => b.startDate - a.startDate)
 }
