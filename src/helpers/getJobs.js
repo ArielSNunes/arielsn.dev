@@ -13,7 +13,7 @@ export default function getJobs() {
 				'Desenvolvimento de sistema para leitura, interpretação e análise de documentos de crédito acumulado de acordo com portarias da Secretaria da Fazenda',
 				'Arquitetura e desenvolvimento de sistema de verificação e validação de informações para transmissão para a Receita Federal do Brasil',
 				'Desenvolvimento de API Rest utilizando Laravel e MySQL',
-				'Desenvolvimento de soluções para automatização de tarefas voltadas à area de análise fiscal'
+				'Desenvolvimento de soluções para automatização de tarefas voltadas à área de análise fiscal'
 			],
 			role: 'Auxiliar de TI'
 		},
