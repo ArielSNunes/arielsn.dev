@@ -47,14 +47,14 @@ export default function getSkills() {
 		{
 			tech: 'NestJS',
 			docs: 'https://nestjs.com/',
-			level: 2.5,
+			level: 3.5,
 			maxLevel,
 			studying: true
 		},
 		{
 			tech: 'Tailwind',
 			docs: 'https://tailwindcss.com/',
-			level: 2.5,
+			level: 3,
 			maxLevel,
 			studying: true
 		},
