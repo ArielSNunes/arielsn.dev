@@ -21,7 +21,7 @@ function Obrigado({ user }) {
 
 export async function getStaticProps(ctx) {
 	const data = await getUser('ArielSNunes', 12)
-	return { props: data }
+	return { props: data, revalidate: 600 }
 }
 
 export default Obrigado
