@@ -3,6 +3,7 @@ import { VscGithub, VscMail } from 'react-icons/vsc'
 import { FiLink2 } from 'react-icons/fi'
 import Link from "next/link"
 import profilePic from '../../public/images/me.jpg'
+import React from "react"
 
 const User = ({ user, children }) => {
 	return (
@@ -26,10 +27,18 @@ const User = ({ user, children }) => {
 					<div className="relative border-2 border-orange rounded-lg">
 						<ul className="text-3xl flex justify-start gap-3 px-5 py-2">
 							<li>
-								<Link passHref href='/'><FiLink2 className="hover:text-orange hover:cursor-pointer" /></Link>
+								<Link passHref href='/'>
+									<a className="hover:text-orange hover:cursor-pointer">
+										<FiLink2 />
+									</a>
+								</Link>
 							</li>
 							<li>
-								<Link passHref href='/contato'><VscMail className="hover:text-orange hover:cursor-pointer" /></Link>
+								<Link passHref href='/contato'>
+									<a className="hover:text-orange hover:cursor-pointer">
+										<VscMail />
+									</a>
+								</Link>
 							</li>
 							<li>
 								<a className="hover:text-orange" href={user.html_url || 'https://github.com/ArielSNunes'} target='_blank' rel="noreferrer">

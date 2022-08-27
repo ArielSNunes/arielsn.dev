@@ -30,7 +30,7 @@ const Header = ({ name, job }) => {
 			<meta name="keywords" content="desenvolvedor, software, php, node, next, nest, tailwind, bootstrap, sql, mongodb, mysql, javascript, js" />
 			<meta name="description" content={desc} />
 			<meta name="robots" content="index, follow" />
-			<meta charset="UTF-8" />
+			<meta charSet="UTF-8" />
 			<link rel="canonical" href={url} />
 			<meta itemProp="url" content={url} />
 			<meta itemProp="name" content={`${myName} - ${myJob}`} />
