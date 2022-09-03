@@ -21,14 +21,14 @@ export default function getJobs() {
 			location: 'São José dos Campos/SP',
 			place: 'Dynamic System e VISH! Internet e Sistemas LTDA',
 			isCurrent: true,
-			startDate: new Date(2020, 12-1, 1),
-			endDate: new Date(2020, 10-1, 13),
+			startDate: new Date(2020, 12 - 1, 1),
+			endDate: new Date(2020, 10 - 1, 13),
 			responsibilities: [
 				'Desenvolvimento de software e sistemas utilizando Bootstrap 4, jQuery, PHP 7 e MySQL',
 				'Desenvolvimento de API utilizando NodeJS e PHP 7',
 				'Desenvolvimento de rotinas de processamento assíncrono',
 				'Desenvolvimento de rotinas e lógicas para processamento de dados geoespaciais',
-				'Desenvolvimento de mapas interativos com Leaflet e ArcGIS'
+				'Desenvolvimento de mapas interativos com <a target="_blank" href="https://www.registrodeimoveis.org.br/mapa">Leaflet e ArcGIS</a> '
 			],
 			role: 'Desenvolvedor Pleno III'
 		}

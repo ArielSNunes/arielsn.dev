@@ -43,8 +43,8 @@ const SingleJob = ({ job, index, show }) => {
 			<ul className="ml-14 mt-1">
 				{job?.responsibilities.map((resp, i) => {
 					return (
-						<li key={i} className="font-light text-sm list-disc hover:text-orange">
-							{resp}
+						<li key={i} className="font-light text-sm list-disc hover:text-orange" dangerouslySetInnerHTML={{ __html: resp }}>
+
 						</li>
 					)
 				})}
