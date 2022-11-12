@@ -30,7 +30,7 @@ export default function getJobs() {
 				'Desenvolvimento de rotinas e lógicas para processamento de dados geoespaciais',
 				'Desenvolvimento de mapas interativos com <a target="_blank" href="https://www.registrodeimoveis.org.br/mapa">Leaflet e ArcGIS</a> '
 			],
-			role: 'Desenvolvedor Pleno III'
+			role: 'Desenvolvedor Senior I'
 		}
 	].sort((a, b) => b.startDate - a.startDate)
 }
