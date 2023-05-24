@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { VscGithub, VscMail } from 'react-icons/vsc'
+import { FaLinkedinIn } from 'react-icons/fa'
 import { FiLink2 } from 'react-icons/fi'
 import Link from "next/link"
 import profilePic from '../../public/images/me.jpg'
@@ -43,6 +44,11 @@ const User = ({ user, children }) => {
 							<li>
 								<a className="hover:text-orange" href={user.html_url || 'https://github.com/ArielSNunes'} target='_blank' rel="noreferrer">
 									<VscGithub />
+								</a>
+							</li>
+							<li>
+								<a className="hover:text-orange text-md" href="https://www.linkedin.com/in/arielsn/" target='_blank' rel="noreferrer">
+									<FaLinkedinIn />
 								</a>
 							</li>
 						</ul>
